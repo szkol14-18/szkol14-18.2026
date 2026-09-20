@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block tytul %}Lista{% endblock %}
+
+{% block tresc %}
+        <h1>{{ tytul }}</h1>
+        <ul>
+            {% for produkt in produkty %}
+                <li>{{ loop.index }} - {{ produkt }}</li>
+
+            {% endfor %}
+        </ul>
+
+{% endblock %}

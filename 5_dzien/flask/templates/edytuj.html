@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block tytul %}Edytuj{% endblock %}
+
+{% block tresc %}
+
+    <h1>Edytuj zadanie</h1>
+    <form method="post">
+        <label>Tytul:</label><br>
+        <input type="text" name="tytul" value="{{ zadanie['tytul'] }}" required style="width: 300px;"><br><br>
+        <label>Opis:</label><br>
+        <textarea name="opis" rows="3" style="width: 300px;">{{ zadanie["opis"] if zadanie["opis"] else "" }}</textarea><br><br>
+        <button type="submit">Zapisz</button>
+        <a href="/">Anuluj</a>
+    </form>
+
+ 
+
+{% endblock %}

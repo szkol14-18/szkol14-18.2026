@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block tytul %}Dodaj{% endblock %}
+
+{% block tresc %}
+    <h1>Dodaj nowe zadanie</h1>
+    <form method="post">
+        <label>Tytul:</label><br>
+        <input type="text" name="tytul" required style="width: 300px;"><br><br>
+        <label>Opis (opcjonalnie):</label><br>
+        <textarea name="opis" rows="3" style="width: 300px;"></textarea><br><br>
+        <button type="submit">Dodaj</button>
+        <a href="/">Anuluj</a> 
+    </form>
+
+{% endblock %}
